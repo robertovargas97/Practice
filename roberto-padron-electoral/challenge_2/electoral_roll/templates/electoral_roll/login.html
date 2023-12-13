@@ -1,0 +1,26 @@
+{% extends "electoral_roll/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron bg-white card pb-2 pt-4">
+<h1 class="display-5">Iniciar sesión</h1>
+<!-- Action result to redirect -->
+<hr>
+<form class="container row"method="POST">
+    {% csrf_token %}
+    <div class="form-group col-6 offset-3 mt-4">
+        <label for="username">Ingrese su usuario *</label>
+        <input type="text" class="form-control" id="id_username" name="username" required placeholder="admin">
+    </div>
+    <div class="form-group col-6 offset-3">
+        <label for="password">Ingrese su contraeña *</label>
+        <input type="password" class="form-control" id="id_password" name="password" placeholder="admin">
+    </div>
+
+    {% if form.errors %}
+    <p class="text-danger text-center col-12">Ingrese un correo y/o contraseña válidos.</p>
+    {% endif %}
+    <button type="submit" class="btn flag-blue mb-4 col-2 offset-5">Entrar</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.flag-blue ,button .flag-blue {
+ background: #002B7F!important;
+ color: #fff!important;
+}
+
+button.flag-blue:hover, a.flag-blue:hover{
+    background: #001f66!important;
+}
+
+button:disabled,
+button[disabled],button:disabled:hover,
+button[disabled]:hover{
+    background: #cecece!important;
+}
+
+.flag-red{
+    color: #CE1126;
+}
+
+.main{
+    min-height: 75vh;
+}

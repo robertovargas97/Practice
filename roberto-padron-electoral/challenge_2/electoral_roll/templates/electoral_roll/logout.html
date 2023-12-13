@@ -1,0 +1,14 @@
+{% extends "electoral_roll/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron bg-white card pb-3">
+    <h1 class="display-5">Has cerrado sesión</h1>
+    <hr>
+
+    <div class="form-group">
+        <a class="btn flag-blue" href="{% url 'electoral_roll-home' %}">Volver al inicio</a>
+    </div>
+</div>
+
+{% endblock %}

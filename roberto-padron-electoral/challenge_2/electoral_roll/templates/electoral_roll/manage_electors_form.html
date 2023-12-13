@@ -1,0 +1,32 @@
+{% extends "electoral_roll/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron bg-white card pt-4">
+    <h1 class="display-5"> Que desea hacer? <i class="fas fa-info-circle"></i></h1>
+    <hr>
+
+    <div class="row">
+        <div class="card col-5 offset-1 text-center mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Agregar elector</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text">Formulario que permite agregar electoresa su respectivo lugar de votación</p>
+              <a href="{% url 'elector-create' %}" class="btn flag-blue">Agregar  <i class="ml-1 fas fa-plus"></i></a>
+            </div>
+          </div>
+        
+          <div class="card col-5 text-center mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Eliminar elector</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text">Formulario que permite buscar un elector y eliminarlo</p>
+              <a href="{% url 'electoral_roll-home' %}" class=" btn flag-blue">Eliminar <i class="ml-1 far fa-trash-alt"></i></a>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

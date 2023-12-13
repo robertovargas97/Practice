@@ -1,0 +1,8 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "left",
+    "breadcrumbs.enabled": true,
+    "editor.guides.bracketPairs": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on"
+}

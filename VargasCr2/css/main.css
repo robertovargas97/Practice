@@ -1,0 +1,1478 @@
+/*  HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/**Estilos Globales**/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 98%;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+}
+
+header.site-header {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+div.hero {
+    background-image: url("../img/IMG_4868-1600x1067_a2ee58b55965a51f7dca869a370a9827.jpg");
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div.contenido-header {
+    padding-top: 2%;
+}
+
+div.vargas-info {
+    text-align: center;
+    color: #ffffff;
+    height: 100%;
+}
+
+div.info-box {
+    width: 70%;
+    margin: 5% 0 15% 15%;
+    border-radius: 15px;
+    background-color: rgba(153, 153, 153, 0.479);
+    transition: all 0.4s;
+}
+
+div.clearfix:nth-child(2) {
+    margin-bottom: 10%;
+}
+
+div.info-box:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 10px black;
+}
+
+div.info-box:hover h2, div.info-box:hover p {
+    text-shadow: 5px 5px 10px black;
+    transform: rotate(-1deg);
+}
+
+div.info-box:hover img {
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 10px black;
+}
+
+div .box-picture {
+    width: 28%;
+    float: left;
+    text-align: left;
+}
+
+div .box-picture img {
+    width: 95%;
+    padding: 5px;
+    border-radius: 20%;
+    margin: 2%;
+    transition: all 0.4s;
+}
+
+div.box-info {
+    width: 65%;
+    float: right;
+}
+
+div.box-info h2 {
+    margin: 0 5px 0 0;
+    text-align: left;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 125%;
+    padding-top: 15px;
+    transition: all 0.4s;
+}
+
+div.box-info p {
+    margin-top: 5px;
+    text-align: left;
+    font-family: 'Dosis', sans-serif;
+    font-size: 95%;
+    text-transform: uppercase;
+}
+
+div.box-info h2 i {
+    display: inline-block;
+    font-size: 120%;
+}
+
+div.box-info p i {
+    display: inline-block;
+    font-size: 120%;
+    color: rgba(255, 136, 0);
+}
+
+div.sn {
+    width: 70%;
+    margin-left: 15%;
+    height: 100%;
+}
+
+div.sn:hover h1.site-name, div.sn:hover p.slogan {
+    color: rgba(255, 136, 0, 00.651);
+}
+
+div.sn:hover h1.site-name span, div.sn:hover p.slogan span {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+h1.site-name {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 100%;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.4s;
+}
+
+h1.site-name span {
+    color: rgba(255, 136, 0, 00.651);
+    transition: all 0.4s;
+}
+
+p.slogan {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.4s;
+    margin-bottom: 50px;
+}
+
+p.slogan span {
+    color: rgba(255, 136, 0, 0.651);
+    transition: all 0.4s;
+}
+
+
+/**Footer**/
+
+footer.site-footer {
+    background-color: #353535;
+    text-align: center;
+    border-top: 1px solid rgba(255, 136, 0, 00.651);
+}
+
+footer .contenedor > div {
+    color: white;
+    padding: 0 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer.site-footer div.contenedor > div h3 {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 00.651);
+    padding: 5px 0;
+    text-align: center;
+}
+
+footer.site-footer div.contenedor > div h3 span {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 136, 0, 00.651);
+    text-align: center;
+}
+
+footer.site-footer div.contenedor > div p {
+    color: rgba(255, 136, 0, 00.651);
+}
+
+footer p.copy {
+    border-top: 1px solid rgba(255, 136, 0, 00.651);
+    margin: 0;
+    margin-top: 10px;
+    background-color: #7e7e7e7e;
+    display: block;
+    padding: 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/** General Media queries**/
+
+@media only screen and (min-width: 260px){
+    .contenedor {
+        width: 90%  ;
+    }
+    div.sn {
+        width: 100% ;
+        height: 100% ;
+        margin: 0 auto ;
+    }
+    h1.site-name {
+        font-size: 250% ;
+    }
+    p.slogan {
+        font-size: 80% ;
+        margin-bottom: 25% ;
+    }
+    div.info-box {
+        width: 80% ;
+        margin: 5% 0 15% 10%;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 70% ;
+    }
+    div.box-info h2 {
+        font-size: 12px ;
+    }
+    div.box-info p {
+        font-size: 10px ;
+    }
+    div.box-info h2 i {
+        font-size: 15px ;
+    }
+    div.box-info p i {
+        font-size: 15px ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 10px ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 10px ;
+    }
+    footer p.copy {
+        font-size: 10px  ;
+    }
+}
+
+@media only screen and (min-width: 320px){
+    .contenedor {
+        width: 98%  ;
+    }
+    div.sn {
+        width: 100% ;
+        height: 100% ;
+        margin: 0 auto ;
+    }
+    h1.site-name {
+        font-size: 350% ;
+    }
+    p.slogan {
+        font-size: 80% ;
+        margin-bottom: 10% ;
+    }
+    div.info-box {
+        width: 85% ;
+        margin: 5% 0 15% 7.5%;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 55% ;
+    }
+    div.box-info h2 {
+        font-size: 14px ;
+    }
+    div.box-info p {
+        font-size: 12px ;
+    }
+    div.box-info h2 i {
+        font-size: 15px ;
+    }
+    div.box-info p i {
+        font-size: 15px ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px ;
+    }
+    footer p.copy {
+        font-size: 12px  ;
+    }
+}
+/*Iphone 5/SE*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation:portrait) {
+    div.info-box.rvargas {
+        margin-bottom: 35%  ;
+    }
+}
+
+
+@media only screen and (min-width: 360px){
+    
+    h1.site-name {
+        font-size: 400%  ;
+        margin-top: -2%  ;
+    }
+
+    p.slogan {
+        font-size: 95%  ;
+    }
+    
+    div.info-box {
+        width: 80%  ;
+        margin: 5% 0 15% 10%  ;
+    }
+
+    div.info-box.rvargas {
+        margin-bottom: 40%  ;
+    }
+    
+    div.box-info h2 {
+        font-size: 15px  ;
+    }
+
+    div.box-info p {
+        font-size: 13px  ;
+    }
+
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+}
+/*Smartphone Galaxy S5*/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation:portrait) {
+
+
+    h1.site-name {
+        font-size: 400%  ;
+        margin-top: 2%;
+    }
+    
+    div.box-info h2 {
+        font-size: 15px  ;
+    }
+    div.box-info p {
+        font-size: 13px  ;
+    }
+    div.box-info h2 i {
+        font-size: 16px  ;
+    }
+    div.box-info p i {
+        font-size: 16px  ;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+  
+    h1.site-name {
+        font-size: 420%  ;
+        margin-top: 2%;
+    }
+
+    p.slogan {
+        font-size: 100%  ;
+        margin-bottom: 10%  ;
+    }
+    div.info-box {
+        width: 85%  ;
+        margin: 5% 0 15% 7.5%  ;
+    }
+
+    div.info-box.rvargas {
+        margin-bottom: 45%  ;
+    }
+    div.box-info h2 {
+        font-size: 16px  ;
+    }
+    div.box-info p {
+        font-size: 15px  ;
+    }
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+    
+}
+
+/*Iphone 6/7/8*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation:portrait) {
+
+    div.info-box.rvargas {
+        margin-bottom: 40%  ;
+    }
+}
+
+/*Iphone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px)and (orientation:portrait) {
+   
+    p.slogan {
+        font-size: 110%  ;
+        margin-bottom: 20%  ;
+    }
+   
+    div.info-box.rvargas {
+        margin-bottom: 66%  ;
+    }
+}
+
+
+@media only screen and (min-width: 414px) {
+  
+    h1.site-name {
+        font-size: 465%  ;
+    }
+    p.slogan {
+        font-size: 120%  ;
+    }
+    
+    div.info-box.rvargas {
+        margin-bottom: 35%  ;
+    }
+}
+
+/*Iphone 6/7/8 Plus*/
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px)and (orientation:portrait) {
+
+    h1.site-name {
+        font-size: 470%  ;
+    }
+    p.slogan {
+        font-size: 120%  ;
+        margin-bottom: 10%  ;
+    }
+    
+    div.info-box.rvargas {
+        margin-bottom: 42%  ;
+    }
+    div.box-info h2 {
+        font-size: 18px  ;
+    }
+
+    div.box-info p {
+        font-size: 15px  ;
+    }
+}
+
+
+@media only screen and (min-width: 520px) {
+    h1.site-name {
+        font-size: 550%  ;
+    }
+    p.slogan {
+        font-size: 120%  ;
+        margin-bottom: 10%  ;
+    }
+    div.info-box {
+        width: 80%  ;
+        margin: 5% 0 15% 10%  ;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 30%  ;
+    }
+    div.box-info h2 {
+        font-size: 22px  ;
+    }
+    div.box-info p {
+        font-size: 15px  ;
+    }
+    div.box-info h2 i {
+        font-size: 25px  ;
+    }
+    div.box-info p i {
+        font-size: 25px  ;
+    }
+   
+}
+
+
+@media only screen and (min-width: 631px) {
+ 
+    h1.site-name {
+        font-size: 600%  ;
+    }
+
+    div.info-box {
+        width: 75%  ;
+        margin: 5% 0 15% 12.5%  ;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 37%  ;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    h1.site-name {
+        font-size: 650%  ;
+        margin-top: -1%;
+    }
+    p.slogan {
+        font-size: 130%  ;
+        margin-bottom: 8%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        margin: 5% 2.5% 28% 2.5%  ;
+        float: left;
+    }
+    div.info-box.rvargas {
+        margin: 5% 2.5% 28% 2.5%  ;
+        float: right;
+    }
+    div.box-info h2 {
+        font-size: 16px  ;
+    }
+    div.box-info p {
+        font-size: 15px  ;
+        margin-bottom: 10px;
+    }
+
+    div.info-box.rvargas div.box-info p {
+        margin-bottom: 8px;
+    }
+    div.box-info h2 i {
+        font-size: 20px  ;
+    }
+    div.box-info p i {
+        font-size: 20px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 13px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 13px  ;
+    }
+    footer p.copy {
+        font-size: 11px  ;
+    }
+}
+
+/* Ipad*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+    h1.site-name {
+        font-size: 800%  ;
+        margin-top: 2%;
+    }
+    p.slogan {
+        font-size: 160%  ;
+        margin-bottom: 8%  ;
+    }
+    div.info-box {
+        width: 70%  ;
+        margin: 5% 0% 20% 15%  ;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 20%  ;
+        margin: 0 15% 25% 0%  ;
+    }
+    div.box-info h2 {
+        font-size: 25px  ;
+    }
+    div.box-info p {
+        font-size: 20px  ;
+        margin-bottom: 10px;
+    }
+
+    div.info-box.rvargas div.box-info p {
+        margin-bottom: 8px;
+    }
+    div.box-info h2 i {
+        font-size: 30px  ;
+    }
+    div.box-info p i {
+        font-size: 30px  ;
+    }
+   
+}
+
+
+@media only screen and (min-width: 800px){
+  
+    h1.site-name {
+        font-size: 700%  ;
+    }
+    p.slogan {
+        margin-bottom: 7%  ;
+    }
+ 
+    div.info-box.rvargas {
+        margin: 5% 2.5% 26% 2.5%  ;
+    }
+}
+
+/*Nexus 10*/
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px)  and (orientation:portrait){
+   
+    h1.site-name {
+        font-size: 850%  ;
+        margin-top: 2%;
+    }
+    p.slogan {
+        font-size: 180%  ;
+        margin-bottom: 15%  ;
+    }
+    div.info-box {
+        width: 75%  ;
+        margin: 5% 0% 45% 12.5%  ;
+    }
+    div.info-box.rvargas {
+       
+        margin: 0 12.5% 45% 0%  ;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    h1.site-name {
+        font-size: 750%  ;
+      margin-top: -2%;
+    }
+    p.slogan {
+        font-size: 150%  ;
+        margin-bottom: 4%  ;
+    }
+    div.info-box {
+        width: 40%  ;
+        margin: 5% 0% 18% 8%  ;
+        float: left;
+    }
+    div.info-box.rvargas {
+        margin: 5% 8% 18% 0%  ;
+        float: right;
+    }
+    div.box-info h2 {
+        font-size: 18px  ;
+    }
+    div.box-info p {
+        font-size: 14px  ;
+    }
+
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px  ;
+    }
+    footer p.copy {
+        font-size: 10px  ;
+    }
+}
+/*
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px)  and (orientation:portrait){
+    h1.site-name {
+        font-size: 750%  ;
+      margin-top: -2%;
+    }
+    p.slogan {
+        font-size: 150%  ;
+        margin-bottom: 4%  ;
+    }
+    div.info-box {
+        width: 40%  ;
+        margin: 5% 0% 18% 8%  ;
+        float: left;
+    }
+    div.info-box.rvargas {
+        margin: 5% 8% 18% 0%  ;
+        float: right;
+    }
+    div.box-info h2 {
+        font-size: 18px  ;
+    }
+    div.box-info p {
+        font-size: 14px  ;
+    }
+
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px  ;
+    }
+    footer p.copy {
+        font-size: 10px  ;
+    }
+
+}
+*/
+
+@media only screen and (min-width: 1125px) {
+  
+    h1.site-name {
+        font-size: 800%  ;
+      margin-top: -2%;
+    }
+    p.slogan {
+        font-size: 150%  ;
+        margin-bottom: 2%  ;
+    }
+    div.info-box {
+        width: 40%  ;
+        margin: 5% 0% 20% 8%  ;
+        float: left;
+    }
+    div.info-box.rvargas {
+        margin: 5% 8% 20% 0%  ;
+        float: right;
+    }
+    div.box-info h2 {
+        font-size: 18px  ;
+    }
+    div.box-info p {
+        font-size: 14px  ;
+    }
+
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px  ;
+    }
+    footer p.copy {
+        font-size: 10px  ;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+  
+    h1.site-name {
+        font-size: 950%  ;
+      margin-top: 0%;
+    }
+    p.slogan {
+        font-size: 200%  ;
+        margin-bottom: 2%  ;
+    }
+    div.info-box {
+        width: 40%  ;
+        margin: 5% 0% 22% 8%  ;
+        float: left;
+    }
+    div.info-box.rvargas {
+        margin: 5% 8% 22% 0%  ;
+        float: right;
+    }
+    div.box-info h2 {
+        font-size: 25px  ;
+    }
+    div.box-info p {
+        font-size: 18px  ;
+    }
+
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 14px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 14px  ;
+    }
+    footer p.copy {
+        font-size: 12px  ;
+    }
+}
+
+/*******************************ORIENTATION LANDSCAPE************************************/
+/**Laptop with HiDPI screen **/
+/*
+@media only screen and (min-device-width: 900px) and (max-device-width: 1440px) {
+   
+    h1.site-name {
+        margin-top: 0%  ;
+        font-size: 950%  ;
+    }
+    p.slogan {
+        font-size: 200%  ;
+        margin-bottom: 8%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 19% 2.5%  ;
+    }
+    div.info-box.rvargas {
+        margin: 0 2.5% 19% 0  ;
+        float: right  ;
+    }
+    div.box-info h2 {
+        font-size: 30px  ;
+    }
+    div.info-box.rvargas div.box-info h2 {
+        margin-bottom: 10px  ;
+    }
+    div.box-info p {
+        font-size: 20px  ;
+    }
+    div.box-info h2 i {
+        font-size: 30px  ;
+    }
+    div.box-info p i {
+        font-size: 30px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 18px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 18px  ;
+    }
+    footer p.copy {
+        font-size: 16px  ;
+    }
+}
+
+*/
+
+/** Nexus 10 and laptop with touch**/
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (orientation:landscape) {
+   
+    h1.site-name {
+        margin-top: 0%  ;
+        font-size: 900%  ;
+    }
+    p.slogan {
+        font-size: 190%  ;
+        margin-bottom: 10%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 22% 2.5%  ;
+    }
+    div.info-box.rvargas {
+        margin: 0 2.5% 22% 0  ;
+        float: right  ;
+    }
+    div.box-info h2 {
+        font-size: 25px  ;
+    }
+    div.info-box.rvargas div.box-info h2 {
+        margin-bottom: 10px  ;
+    }
+    div.box-info p {
+        font-size: 18px  ;
+    }
+    div.box-info h2 i {
+        font-size: 30px  ;
+    }
+    div.box-info p i {
+        font-size: 30px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 16px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 16px  ;
+    }
+    footer p.copy {
+        font-size: 16px  ;
+    }
+}
+
+/* Ipad*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+   
+    h1.site-name {
+        margin-top: -2%  ;
+        font-size: 900%  ;
+    }
+    p.slogan {
+        font-size: 190%  ;
+        margin-bottom: 10%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 10% 2.5%  ;
+    }
+    div.info-box.rvargas {
+        margin: 0 2.5% 18% 0  ;
+        float: right  ;
+    }
+    div.box-info h2 {
+        font-size: 25px  ;
+    }
+    div.info-box.rvargas div.box-info h2 {
+        margin-bottom: 10px  ;
+    }
+    div.box-info p {
+        font-size: 18px  ;
+    }
+    div.box-info h2 i {
+        font-size: 30px  ;
+    }
+    div.box-info p i {
+        font-size: 30px  ;
+    }
+}
+
+/*Iphone 6/7/8 Plus*/
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:landscape) {
+    h1.site-name {
+        margin-top: 1%  ;
+        font-size: 480%  ;
+    }
+    p.slogan {
+        margin-bottom: 5% ;
+        font-size: 120%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 8% 2.5%  ;
+    }
+    
+    div.info-box.rvargas {
+        margin-bottom: 12%!important;
+        float: right  ;
+        margin-right: 2.5%  ;
+    }
+    
+    div.box-info h2 {
+        font-size: 15px  ;
+    }
+    
+    div.box-info p {
+        font-size: 12px  ;
+        margin-bottom: 10px;
+    }
+    div.info-box.rvargas .box-info p{
+        margin-bottom: 0;
+    }
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+    
+}
+
+/*Iphone X*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px)and (orientation:landscape) {
+   
+    h1.site-name {
+        margin-top: 1%  ;
+        font-size: 480%  ;
+    }
+    p.slogan {
+        margin-bottom: 5% ;
+        font-size: 120%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 8% 2.5%  ;
+    }
+    
+    div.info-box.rvargas {
+        margin-top: 0;
+        margin-bottom: 8%  ;
+        float: right ;
+        margin-right: 2.5%  ;
+    }
+    
+    div.box-info h2 {
+        font-size: 15px  ;
+    }
+    
+    div.box-info p {
+        font-size: 12px  ;
+        margin-bottom: 10px;
+    }
+    div.info-box.rvargas .box-info p{
+        margin-bottom: 0;
+    }
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px  ;
+    }
+    footer p.copy {
+        font-size: 12px  ;
+    }
+}
+
+/*Iphone 6/7/8*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation:landscape) {
+    
+    
+    h1.site-name {
+        font-size: 450%  ;
+        margin-top:0; 
+    }
+    p.slogan {
+        margin-bottom: 5% ;
+        font-size: 120%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 15% 2.5%  ;
+    }
+    
+    div.info-box.rvargas {
+        margin-bottom: 15%  ;
+        float: right  ;
+        margin-right: 2.5%  ;
+    }
+    
+    div.box-info h2 {
+        font-size: 14px  ;
+    }
+
+    div.info-box.rvargas .box-info p{
+        margin-bottom: 0;
+    }
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 12px  ;
+    }
+    footer.site-footer div.contenedor > div p {
+        font-size: 12px  ;
+    }
+    footer p.copy {
+        font-size: 12px  ;
+    }
+}
+
+/*Smartphone Galaxy S5*/
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation:landscape) {
+    
+    h1.site-name {
+        font-size: 450%  ;
+        margin-top: -2%  ;
+    }
+    p.slogan {
+        font-size: 100%  ;
+        margin-bottom: 8%  ;
+    }
+    div.info-box {
+        width: 45%  ;
+        float: left  ;
+        margin: 0 0 10% 2.5%  ;
+    }
+    div.info-box.rvargas {
+        margin-bottom: 10%  ;
+        float: right  ;
+        margin-right: 2.5%  ;
+    }
+    div.box-info h2 {
+        font-size: 15px  ;
+    }
+    div.info-box.rvargas div.box-info h2 {
+        margin-bottom: 10px  ;
+    }
+    div.box-info p {
+        font-size: 12px  ;
+    }
+
+    div.info-box.rvargas div.box-info p {
+        margin-bottom: 10px  ;
+    }
+
+    div.box-info h2 i {
+        font-size: 18px  ;
+    }
+    div.box-info p i {
+        font-size: 18px  ;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 11px  ;
+    }
+    footer.site-footer div.contenedor > div p i {
+        font-size: 11px  ;
+    }
+    footer p.copy {
+        font-size: 11px  ;
+    }
+}
+
+/*Iphone 5/SE*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation:landscape) {
+    
+    h1.site-name {
+        font-size: 400%;
+        margin-top: -2%;
+    }
+
+    
+    p.slogan {
+        font-size: 90%;
+        margin-bottom: 5%;
+    }
+    
+    div.info-box {
+        widows: 48%;
+        margin: 0 0 10% 2.5%;
+    }
+    
+    div.info-box.rvargas {
+        margin: 0 2.5% 15% 0%;
+    }
+
+    div.box-info h2 {
+        padding-top: 6px;
+        font-size: 12px ;
+    }
+
+    div.info-box.rvargas div.box-info h2 {
+        margin-bottom: 0;
+    }
+
+    div.info-box div.box-info p {
+        margin-bottom: 23px;
+    }
+
+    div.info-box.rvargas div.box-info p {
+        margin-bottom: 8px;
+    }
+
+    div.box-info p {
+        font-size: 11px ;
+    }
+
+    div.box-info h2 i {
+        font-size: 15px ;
+    }
+    div.box-info p i {
+        font-size: 15px;
+    }
+    footer.site-footer div.contenedor > div h3 {
+        font-size: 10px ;
+    }
+    footer.site-footer div.contenedor > div p i {
+        font-size: 10px ;
+    }
+    footer p.copy {
+        font-size: 10px ;
+    }
+}
+
+
+
+
+
+
+
+
+
+/**Media querys for ipads,tablets and celphones**/
+
+/****************************** ORIENTARION PORTRAIT  (del mas pequeño al más grande)************************************************/
+
+/*********************************** ORIENTARION lANDSCAPE (del mas grande al más pequeño)********************************************/
+
+
+/*********************************************************/
+
+
+/***LA USO CON EL DIV  QUE SERA EL FONDO***/
+
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    background-attachment: fixed;
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8)
+}
+
+
+/********************************************************/
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none   ;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *, *:before, *:after {
+        background: transparent   ;
+        color: #000   ;
+        /* Black prints faster */
+        -webkit-box-shadow: none   ;
+        box-shadow: none   ;
+        text-shadow: none   ;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after, a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap   ;
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,187 @@
+
+{% extends "electoral_roll/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if elector_information|length > 0 %}
+
+<div class="jumbotron bg-white card pb-4 pt-3">
+    <h1 class="text-center display-5 col-12"><strong>Información de votación</strong>  <i class="fas fa-info-circle"></i></h1>
+   
+    <!-- Action result to redirect -->
+    <hr >
+
+    <div class="col-12 mt-4 text-center">
+    <h5 class="mb-3 " > <strong> Nombre completo:</strong>  {{elector_information.nombre }} {{elector_information.primer_apellido}} {{elector_information.segundo_apellido}} </h5>
+    <h5 class="mb-3 " ><strong>Númer de cédula:</strong>  {{elector_information.cedula}}</h5>
+    <h5 class="mb-3 " ><strong>Lugar de votación: </strong> {{elector_information.codigo_electoral__provincia}}, {{elector_information.codigo_electoral__canton}}, {{elector_information.codigo_electoral__distrito}}</h5>
+    <h5 class="mb-3 " ><strong>Código electoral:</strong>  {{elector_information.codigo_electoral}}</h5>
+    <h5 class="mb-3"><strong>Fecha de vencimiento de cédula:</strong>  {{elector_information.fecha_caducidad|date:"l d F Y"}}</h5>
+   
+    <a class="btn flag-blue col-4 mb-2 mt-4" data-toggle="modal" data-target="#provinceModal">Estadísticas por provincia</a>
+    <a class="btn flag-blue col-4 mb-2 mt-4" data-toggle="modal" data-target="#cantonModal">Estadísticas por cantón</a>
+    <a class="btn flag-blue col-4 mb-0" data-toggle="modal" data-target="#districtModal">Estadísticas por distrito</a>
+    <a class="btn flag-blue col-4 mb-0" data-toggle="modal" data-target="#identiModal">Estadísticas por cédula</a>
+
+  </div>
+</div>
+
+
+
+  <!-- Province Modal -->
+  <div class="modal fade" id="provinceModal" tabindex="-1" aria-labelledby="provinceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="provinceModalLabel">Estadísticas por provincia ( {{elector_information.codigo_electoral__provincia}} )</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table text-center">
+                <thead class="flag-blue">
+                  <tr>
+                    <th scope="col">Total de votantes</th>
+                    <th scope="col">Total de votantes hombres</th>
+                    <th scope="col">Total de votantes mujeres</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{statistics.province_statistics.total_votantes}}</td>
+                    <td>{{statistics.province_statistics.total_votantes_hombres}}</td>
+                    <td>{{statistics.province_statistics.total_votantes_mujeres}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn flag-blue" data-dismiss="modal">Salir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Canton Modal -->
+ <div class="modal fade" id="cantonModal" tabindex="-1" aria-labelledby="cantonModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cantonModalLabel">Estadísticas por cantón ({{elector_information.codigo_electoral__canton}} )</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <table class="table text-center">
+              <thead class="flag-blue">
+                <tr>
+                  <th scope="col">Total de votantes</th>
+                  <th scope="col">Total de votantes hombres</th>
+                  <th scope="col">Total de votantes mujeres</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{statistics.canton_statistics.total_votantes}}</td>
+                  <td>{{statistics.canton_statistics.total_votantes_hombres}}</td>
+                  <td>{{statistics.canton_statistics.total_votantes_mujeres}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn flag-blue" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- District Modal -->
+<div class="modal fade" id="districtModal" tabindex="-1" aria-labelledby="districtModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="districtModalLabel">Estadísticas por distrito ({{elector_information.codigo_electoral__distrito}} )</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <table class="table text-center">
+              <thead class="flag-blue">
+                <tr>
+                  <th scope="col">Total de votantes</th>
+                  <th scope="col">Total de votantes hombres</th>
+                  <th scope="col">Total de votantes mujeres</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{statistics.district_statistics.total_votantes}}</td>
+                  <td>{{statistics.district_statistics.total_votantes_hombres}}</td>
+                  <td>{{statistics.district_statistics.total_votantes_mujeres}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn flag-blue" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Date Modal -->
+<div class="modal fade" id="identiModal" tabindex="-1" aria-labelledby="identiModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="identiModalLabel">Estadísticas por expiración de cédula ( {{elector_information.fecha_caducidad|date:"l d F Y"}} )</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <table class="table text-center">
+              <thead class="flag-blue">
+                <tr>
+                  <th scope="col">Total de votantes con la misma fecha de expiración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{statistics.id_statistics.same_id_count}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn flag-blue" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+<div class="alert alert-info" role="alert">
+  No existen coincidencias con la Información proporcionada. Vuelva a ingresar los datos y verifiquelos.
+</div>
+
+{% endif %}
+
+<div class="col-12 text-center">
+  
+  <a href="{%url 'electoral_roll-home'%}" class="btn flag-blue mr-2 col-2">Volver</a>
+  {% if user.is_authenticated and elector_information.cedula|length > 0 %}
+  <a href="{%url 'elector-delete' elector_information.cedula %}" class="btn btn-danger ml-2 col-2"><i class="far fa-trash-alt"></i> Eliminar elector</a>
+  {% else %}
+  {% endif %}
+</div>
+
+
+
+{% endblock %}
